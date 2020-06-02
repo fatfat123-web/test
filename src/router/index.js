@@ -10,7 +10,7 @@ Vue.use(VueRouter)
       name: 'index',
       component: () => import('@/views/index'),
       meta:{
-        title: '鼎华城'
+        title: '神秘盒子惊现龙城？！'
       }
     },
 ]
