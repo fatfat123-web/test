@@ -128,11 +128,11 @@
 
                 <img :class="this.gkd>94?'animate__animated animate__bounceInLeft':''" class="element"
                      v-show="this.gkd>94"
-                     src="../assets/images/advertising2.png" style="left:9%;width: 53%;height: auto;top:47.5%"/>
+                     src="../assets/images/advertising2.png" style="left:7.2%;width: 53%;height: auto;top:47.5%"/>
 
                 <img :class="this.gkd>94.5?'animate__animated animate__bounceInRight':''" class="element"
                      v-show="this.gkd>94.5"
-                     src="../assets/images/advertising3.png" style="left:25%;width:66%;height: auto;top:69%"/>
+                     src="../assets/images/advertising3.png" style="left:24%;width:66%;height: auto;top:68.1%"/>
 
                 <img :class="this.gkd>96?'animate__animated animate__zoomInDown':''" class="element"
                      v-show="this.gkd>96"
