@@ -46,7 +46,7 @@
 
             <img src="../assets/images/bj.jpg" style="width: 100%;height: auto;" @load="imgLoadEnd"/>
 
-            <img src="../assets/images/gift.png" class="element" ref="star" style="width:50%;" :style="star">
+            <img    src="../assets/images/gift.png" class="element" ref="star" style="width:50%;" :style="star">
 
             <img src="../assets/images/dialogue1.png" class="element" ref="dialogue1" style="width:25%"
                  :style="dialogue1"/>
@@ -216,6 +216,7 @@
         },
         methods: {
             setKg() {
+                console.log(11111)
                 this.a = this.a === 1 ? 0 : this.a = 1;
                 this.kg = !this.kg
                 let div = this.$refs.scroll
@@ -278,7 +279,7 @@
                     this.$nextTick(() => {
                         this.load = false
                     })
-                }, 1000)
+                }, 10)
             },
             souvenir(_scrolldrag,data){
                 //  滚动条滚动的距离
