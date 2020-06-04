@@ -145,10 +145,8 @@
                 <img :class="this.gkd>97?'animate__animated animate__rotateInDownLeft':''" class="element"
                      v-show="this.gkd>97"
                      src="../assets/images/advertising4.png" style="left:17%;width:66%;height: auto;top:79.2%"/>
-
-                <div class="loader1" @click="setKg"
-                     :style="{background: background[a]}">
-                    <!--                    {{kg ? '暂停' : '播放'}}-->
+                <div class="hint">{{kg ? '暂停' : '播放'}}</div>
+                <div class="loader1" @click="setKg">
                     <div class="face">
                         <div class="circle"></div>
                     </div>
@@ -156,6 +154,10 @@
                         <div class="circle"></div>
                     </div>
                 </div>
+                  <div class="reminder">
+
+
+                      <img src="../assets/images/dian.gif" style="width: 5rem;height: auto;position: absolute"/></div>
 
                 <!--                <div @click="setKg" class="music" style="top: 15%;right: 10%;position: fixed;background: no-repeat;border: 1px dotted white">-->
                 <!--                    <span style="letter-spacing:2px;padding-left: 3px">{{kg ? '暂停' : '播放'}}</span>-->
@@ -184,7 +186,6 @@
                 load: true,
                 gkd: null,
                 mark: 0,
-                background: [`url(${require('../assets/images/bf.png')})no-repeat`, `url(${require('../assets/images/zt.png')})no-repeat`],
 
                 img: [require('../assets/images/0.png'), require('../assets/images/1.png'),
                     require('../assets/images/2.png')],
@@ -281,7 +282,7 @@
                     })
                 }, 10)
             },
-            souvenir(_scrolldrag,data){
+            souvenir(_scrolldrag, data) {
                 //  滚动条滚动的距离
                 // console.log(_scrolldrag)
                 //滚动条滚动的数据  滚动条滚动到网页>=5的时候
@@ -332,8 +333,7 @@
                 let data = this.$options.data()
                 // console.log(_scrolldrag)
 
-                this.souvenir(_scrolldrag,data)
-
+                this.souvenir(_scrolldrag, data)
 
 
                 if (_scrolldrag >= 8) {
@@ -1017,6 +1017,30 @@
         to {
             transform: rotate(1turn);
         }
+    }
+
+    .hint {
+        color: white;
+        font-weight: 300;
+        width: 5em;
+        height: 5em;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 15%;
+        right: 10%;
+        position: fixed;
+        letter-spacing: 2px
+    }
+
+    .reminder {
+        top: 23%;
+        right: 10%;
+        position: fixed;
+        width: 5em;
+        height: 5em;
+
     }
 
 </style>
