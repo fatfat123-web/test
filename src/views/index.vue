@@ -116,11 +116,11 @@
 
                 <img :class="this.gkd>89?'animate__animated animate__bounceInLeft':''" class="element"
                      v-show="this.gkd>89"
-                     src="../assets/images/advertising1.png" style="left:23%;width:60%;height: auto;top:35.4%"/>
+                     src="../assets/images/advertising1.png" style="left:20.5%;width:60%;height: auto;top:35.3%"/>
 
                 <img :class="this.gkd>93?'animate__animated animate__bounceInRight':''" class="element"
                      v-show="this.gkd>93"
-                     src="../assets/images/prize1.png" style="right:0;width: 100%;height: auto;top:42.5%"/>
+                     src="../assets/images/prize1.png" style="right:0;width: 100%;height: auto;top:43.5%"/>
 
                 <img :class="this.gkd>93.5?'animate__animated animate__bounceInDown':''" v-show="this.gkd>93.5"
                      src="../assets/images/prize2.png" style="left: 2%;width:100%;height: auto;top:56.4%"
@@ -128,11 +128,11 @@
 
                 <img :class="this.gkd>94?'animate__animated animate__bounceInLeft':''" class="element"
                      v-show="this.gkd>94"
-                     src="../assets/images/advertising2.png" style="left:9%;width: 53%;height: auto;top:47.5%"/>
+                     src="../assets/images/advertising2.png" style="left:7.2%;width: 53%;height: auto;top:48.5%"/>
 
                 <img :class="this.gkd>94.5?'animate__animated animate__bounceInRight':''" class="element"
                      v-show="this.gkd>94.5"
-                     src="../assets/images/advertising3.png" style="left:25%;width:66%;height: auto;top:69%"/>
+                     src="../assets/images/advertising3.png" style="left:24%;width:66%;height: auto;top:68.1%"/>
 
                 <img :class="this.gkd>96?'animate__animated animate__zoomInDown':''" class="element"
                      v-show="this.gkd>96"
