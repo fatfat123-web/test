@@ -217,7 +217,6 @@
         },
         methods: {
             setKg() {
-                console.log(11111)
                 this.a = this.a === 1 ? 0 : this.a = 1;
                 this.kg = !this.kg
                 let div = this.$refs.scroll
@@ -227,8 +226,8 @@
                 let clientHeight = div.clientHeight
                 if (this.kg) {
                     this.timer = setInterval(() => {
-                        div.scrollTop += 1
-                    }, 7)
+                        div.scrollTop += 2
+                    }, 10)
                 } else {
                     clearInterval(this.timer)
                 }
