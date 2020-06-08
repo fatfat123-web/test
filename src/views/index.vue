@@ -46,7 +46,7 @@
 
             <img src="../assets/images/bj.jpg" style="width: 100%;height: auto;" @load="imgLoadEnd"/>
 
-            <img    src="../assets/images/gift.png" class="element" ref="star" style="width:50%;" :style="star">
+            <img    src="../assets/images/gift.png" class="element" ref="star" style="width:50%;pointer-events: auto;" :style="star" @click="setKg">
 
             <img src="../assets/images/dialogue1.png" class="element" ref="dialogue1" style="width:25%"
                  :style="dialogue1"/>
@@ -145,16 +145,16 @@
                 <img :class="this.gkd>97?'animate__animated animate__rotateInDownLeft':''" class="element"
                      v-show="this.gkd>97"
                      src="../assets/images/advertising4.png" style="left:17%;width:66%;height: auto;top:79.2%"/>
-                <div class="hint">{{kg ? '暂停' : '播放'}}</div>
-                <div class="loader1" @click="setKg">
-                    <div class="face">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="face">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-                  <div class="reminder">
+<!--                <div class="hint">{{kg ? '暂停' : '播放'}}</div>-->
+<!--                <div class="loader1" @click="setKg">-->
+<!--                    <div class="face">-->
+<!--                        <div class="circle"></div>-->
+<!--                    </div>-->
+<!--                    <div class="face">-->
+<!--                        <div class="circle"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                  <div class="reminder">-->
 
 
                       <img src="../assets/images/dian.gif" style="width: 5rem;height: auto;position: absolute"/></div>
@@ -216,6 +216,7 @@
             }
         },
         methods: {
+
             setKg() {
                 this.a = this.a === 1 ? 0 : this.a = 1;
                 this.kg = !this.kg
@@ -228,7 +229,8 @@
                     this.timer = setInterval(() => {
                         div.scrollTop += 2
                     }, 10)
-                } else {
+                }
+                else {
                     clearInterval(this.timer)
                 }
 
@@ -607,6 +609,7 @@
 <style scoped lang="scss">
     img {
         pointer-events: none; /* 禁止长按图片保存 */
+
     }
 
     .scroll {
