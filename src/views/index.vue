@@ -145,6 +145,11 @@
                 <img :class="this.gkd>97?'animate__animated animate__rotateInDownLeft':''" class="element"
                      v-show="this.gkd>97"
                      src="../assets/images/advertising4.png" style="left:17%;width:66%;height: auto;top:79.2%"/>
+
+                <img :class="this.gkd>98.5?'animate__animated animate__rotateIn':''" class="element"
+                     v-show="this.gkd>98.5"
+                     src="../assets/images/dialogue12.png" style="left:34%;width:50%;height: auto;top:85.8%"/>
+
 <!--                <div class="hint">{{kg ? '暂停' : '播放'}}</div>-->
 <!--                <div class="loader1" @click="setKg">-->
 <!--                    <div class="face">-->
@@ -157,7 +162,7 @@
 <!--                  <div class="reminder">-->
 
 
-                      <img src="../assets/images/dian.gif" style="width: 5rem;height: auto;position: absolute"/></div>
+<!--                      <img src="../assets/images/dian.gif" style="width: 5rem;height: auto;position: absolute"/></div>-->
 
                 <!--                <div @click="setKg" class="music" style="top: 15%;right: 10%;position: fixed;background: no-repeat;border: 1px dotted white">-->
                 <!--                    <span style="letter-spacing:2px;padding-left: 3px">{{kg ? '暂停' : '播放'}}</span>-->
