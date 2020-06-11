@@ -11,11 +11,11 @@ const wxApi = {
      */
     wxRegister (callback) {
                         // 这边的接口请换成你们自己的
-        Axios.post('  ', { reqUrl: window.location.href }, { timeout: 5000, withCredentials: true }).then((res) => {
+        Axios.post('oa.aiyoweihd.com/Bxk/dist', { reqUrl: window.location.href }, { timeout: 5000, withCredentials: true }).then((res) => {
             let data = JSON.parse(res.data.data) // PS: 这里根据你接口的返回值来使用
             wx.config({
-                debug: false, // 开启调试模式
-                appId: data.appId, // 必填，公众号的唯一标识
+                debug: true, // 开启调试模式
+                appId: data.wxd096839b69762085, // 必填，公众号的唯一标识
                 timestamp: data.timestamp, // 必填，生成签名的时间戳
                 nonceStr: data.noncestr, // 必填，生成签名的随机串
                 signature: data.signature, // 必填，签名，见附录1
