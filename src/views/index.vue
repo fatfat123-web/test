@@ -91,7 +91,7 @@
 
             <img src="../assets/images/note.gif" class="element" style="top:61.1%;left: 36%;width:24%;height: auto">
 
-            <img src="../assets/images/dialogue9.png" class="element" style="width:70%" :style="dialogue9"/>
+            <img src="../assets/images/dialogue9.png" class="element" style="width:60%" :style="dialogue9"/>
 
             <img src="../assets/images/balloon.png" class="element" style="width:70%" :style="balloon"/>
 
@@ -210,7 +210,7 @@
                 phone2: {top: '54.8%', left: 62, opacity: 0},
                 phone3: {top: '55.8%', left: '40%', opacity: 0},
                 dialogue8: {top: '64.5%', left: 15, opacity: 0},
-                dialogue9: {top: '66.1%', left: 45, opacity: 0},
+                dialogue9: {top: '66%', left: 45, opacity: 0},
                 balloon: {top: '70.1%', left: "-12%", opacity: 1},
                 dialogue10: {top: '74.3%', left: 25, opacity: 0},
                 dialogue11: {top: '78.4%', left: 25, opacity: 0},
