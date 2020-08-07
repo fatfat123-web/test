@@ -150,15 +150,15 @@
                      v-show="this.gkd>98.5"
                      src="../assets/images/dialogue12.png" style="left:34%;width:50%;height: auto;top:85.8%"/>
 
-<!--                <div class="hint">{{kg ? '暂停' : '播放'}}</div>-->
-<!--                <div class="loader1" @click="setKg">-->
-<!--                    <div class="face">-->
-<!--                        <div class="circle"></div>-->
-<!--                    </div>-->
-<!--                    <div class="face">-->
-<!--                        <div class="circle"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="rotation">{{kg ? '暂停' : '播放'}}</div>
+                <div class="loader1" @click="setKg">
+                    <div class="loop">
+                        <div class="ring"></div>
+                    </div>
+                    <div class="loop">
+                        <div class="ring"></div>
+                    </div>
+                </div>
 <!--                  <div class="reminder">-->
 
 
@@ -287,7 +287,7 @@
                     this.$nextTick(() => {
                         this.load = false
                     })
-                }, 10)
+                }, 5000)
             },
             souvenir(_scrolldrag, data) {
                 //  滚动条滚动的距离
@@ -348,6 +348,7 @@
                     if (rs <= 4) {
                         let dialogue1 = data.dialogue1
                         this.dialogue1.left = dialogue1.left + (rs * 5) + '%'
+                        console.log(this.dialogue1)
                         this.dialogue1.opacity = (rs / 3)
                     }
                     if (rs > 7) {
@@ -430,6 +431,7 @@
                         this.go.left = 100 - 112 / 14 * parseInt(rs) + '%'
                         //            39.1为初始的位置  3.4为开始到结束之间的距离 从上往下走 为加 14要和上面统一
                         this.go.top = 39.1 + 3.4 / 14 * parseInt(rs) + '%'
+                        //这里选到10中间有一断距离会隐身
                         this.mark = arr[parseInt(rs) % 4];
                     }
                 }
@@ -775,20 +777,15 @@
     }
 
     .font2 {
-
         position: absolute;
         top: 55%;
         left: 43%;
         height: auto;
         color: #3d58a2;
         font-size: 14px;
-        /*transform:scale(0.8);*/
-        /*-webkit-transform:scale(0.8);*/
-        /*-moz-transform:scale(0.8);*/
         font-weight: 600;
         letter-spacing: 2px;
         writing-mode: tb-rl
-
     }
 
     @keyframes scale {
@@ -966,14 +963,14 @@
         box-shadow: 5px 5px 20px 10px rgba(255, 255, 0, 0.5)
     }
 
-    .loader1 .face {
+    .loader1 .loop {
         position: absolute;
         border-radius: 50%;
         border-style: solid;
         animation: animate2 3s linear infinite;
     }
 
-    .loader1 .face:nth-child(1) {
+    .loader1 .loop:nth-child(1) {
         width: 100%;
         height: 100%;
         color: gold;
@@ -983,7 +980,7 @@
         animation-direction: normal;
     }
 
-    .loader1 .face:nth-child(2) {
+    .loader1 .loop:nth-child(2) {
         width: 70%;
         height: 70%;
         color: lime;
@@ -993,7 +990,7 @@
         animation-direction: reverse;
     }
 
-    .loader1 .face .circle {
+    .loader1 .loop .ring {
         position: absolute;
         width: 50%;
         height: 0.1em;
@@ -1004,7 +1001,7 @@
         transform-origin: left;
     }
 
-    .loader1 .face .circle::before {
+    .loader1 .loop .ring::before {
         position: absolute;
         top: -0.5em;
         right: -0.5em;
@@ -1027,7 +1024,7 @@
         }
     }
 
-    .hint {
+    .rotation {
         color: white;
         font-weight: 300;
         width: 5em;
